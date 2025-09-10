@@ -46,7 +46,7 @@
                                             </div>
                                             
                                             <div class="join-button ">
-                                                <a class="register-button style-2 uk-flex uk-flex-middle order-course" href="#">
+                                                <a class="register-button style-2 uk-flex uk-flex-middle order-course" href="{{ write_url('lien-he') }}">
                                                     <span>Đăng ký ngay</span>
                                                     <span class="icon"><img src="{{ asset('frontend/resources/img/project/baseball.png') }}" alt="icon"></span>
                                                 </a>

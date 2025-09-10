@@ -1,7 +1,7 @@
 @extends('frontend.homepage.layout')
 @section('content')
 <div class="cart-container">
-    <div class="page-breadcrumb background">      
+    <div class="page-breadcrumb bg-black">      
         <div class="uk-container uk-container-center">
             <ul class="uk-list uk-clearfix uk-flex uk-flex-middle">
                 <li>
@@ -14,11 +14,12 @@
                     <a href="{{ write_url('thanh-toan') }}" title="Thanh toán">Thanh toán</a>
                 </li>
             </ul>
+            <h1 class="heading-1 style-2"><span>Thanh toán</span></h1>
         </div>
     </div>
     <div class="uk-container uk-container-center">
         @if ($errors->any())
-        <div class="uk-alert uk-alert-danger">
+            <div class="uk-alert uk-alert-danger">
                 <ul>
                     @foreach ($errors->all() as $error)
                         <li>{{ $error }}</li>

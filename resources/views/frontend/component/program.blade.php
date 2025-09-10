@@ -7,7 +7,7 @@
     <div class="panel-program">
         <div class="uk-container uk-container-center">
             <h2 class="heading-1 uk-text-center wow fadeInLeft" data-wow-delay="0.4s"><span>{!! strip_tags($descriptionC) !!}</span></h2>
-            <div class="panel-body">z
+            <div class="panel-body">
                 @if(isset($program->posts) && count($program->posts))
                     @php
                         $time = 0.1;

@@ -371,14 +371,14 @@ ul li{
 }
 .cart-checkout{
     border-radius: 8px;
-    background: #28a745;
+    background: #E0F656;
     height:50px;
     width:100%;
     padding:15px 20px;
     text-align: center;
     cursor: pointer;
     font-size:14px;
-    color:#fff;
+    color:#000;
     transition: all 0.3s ease;
     border: none;
     text-transform: uppercase;
@@ -1008,8 +1008,8 @@ ul li{
     font-size: 13px;
 }
 .navigation .dropdown-menu li:hover a{
-    background: #0C4A1A;
-    color:#fff;
+    background: #E0F656;
+    color:#000;
 }
 
 .navigation .main-menu > li:hover > .dropdown-menu{
