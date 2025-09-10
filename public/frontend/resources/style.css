@@ -407,9 +407,9 @@ ul li,ol li{
 }
 
 @media (max-width: 500px){
-    .section-1 .register-button >span:nth-child(1){
+    /* .section-1 .register-button >span:nth-child(1){
         display: none;
-    }
+    } */
     .video-text{
         display: none;
     }
