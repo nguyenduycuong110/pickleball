@@ -3,8 +3,8 @@
         <div class="footer-join-program">
             <div class="uk-container uk-container-center">
                 <div class="footer-description">
-                    <div class="heading-1 style-2"><span>Take your tennis game to the next level with us</span></div>
-                    <div class="description">
+                    <div class="heading-1 style-2 wow fadeInLeft" data-wow-delay="0.3s"><span>Take your tennis game to the next level with us</span></div>
+                    <div class="description wow fadeInDown" data-wow-delay="0.5s">
                         Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua utenim ad minim veniam.
                     </div>
                     <x-button title="Tham gia chương trình của chúng tôi" canonical="" />

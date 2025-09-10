@@ -5,7 +5,7 @@
             <div class="uk-width-1-2 uk-width-small-1-2 uk-width-medium-1-3">
                 <div class="section-1">
                     <div class="section-1-overlay uk-flex uk-flex-column uk-height-1-1 uk-flex-space-between">
-                        <div class="title">{{ $system['intro_section_1_text'] }}</div>
+                        <div class="title wow fadeInLeft" data-wow-delay="1s">{{ $system['intro_section_1_text'] }}</div>
                         <div class="join-button">
                             <a href="{{ $system['intro_section_1_link'] }}" class="register-button uk-flex uk-flex-middle">
                                 <span>Tham gia chương trình</span>
@@ -80,67 +80,64 @@
     </div>
     @include('frontend.component.about-us')
     @include('frontend.component.program')
-    
-    
 
     @if(!is_null($widgets['feedback']->object))
-    @foreach($widgets['feedback']->object as $feedback)
-    @php
-        // dd($feedback);
-        $descriptionC = strip_tags($feedback->languages->description);
-        $contentC = $feedback->languages->content;
-    @endphp
-    <div class="panel-feedback">
-        <div class="uk-container uk-container-center">
-            <div class="panel-head uk-text-center">
-                <h2 class="heading-1"><span>{!! $descriptionC !!}</span></h2>
-                <div class="description">{!! $contentC !!}</div>
-            </div>
-            <div class="panel-body">
-                <div class="uk-flex uk-flex-middle uk-flex-space-between">
-                    <div></div>
-                    <div class="image background-image">
-                        <img src="{{ asset('frontend/resources/img/project/tennis-player-N79XUC8.png') }}" alt="image">
-                    </div>
-                    @if(isset($feedback->posts) && count($feedback->posts))
-                    <div class="feedback-container">
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-container">
-                            <div class="swiper-wrapper">
-                               @foreach($feedback->posts as $post)
-                               @php
-                                   $name = $post->languages[0]->name;
-                                   $description = $post->languages[0]->description;
-                                   $content = $post->languages[0]->content;
-                                   $image = $post->image;
-                               @endphp
-                                <div class="swiper-slide">
-                                    <div class="feedback-item">
-                                        <div class="uk-flex uk-flex-column uk-flex-space-between uk-height-1-1">
-                                            <div class="description">{!! $content !!}</div>
-                                            <div class="content">
-                                                <div class="uk-flex uk-flex-middle">
-                                                    <span class="image avatar"><img src="{{ $image }}" alt="{{ $name }}"></span>
-                                                   <div>
-                                                     <div class="fullname">{{ $name }}</div>
-                                                     <div class="position">{!! $description !!}</div>
-                                                   </div>
+        @foreach($widgets['feedback']->object as $feedback)
+        @php
+            $descriptionC = strip_tags($feedback->languages->description);
+            $contentC = $feedback->languages->content;
+        @endphp
+        <div class="panel-feedback">
+            <div class="uk-container uk-container-center">
+                <div class="panel-head uk-text-center">
+                    <h2 class="heading-1 wow fadeInLeft" data-wow-delay="0.4s"><span>{!! $descriptionC !!}</span></h2>
+                    <div class="description wow fadeInLeft" data-wow-delay="0.6s">{!! $contentC !!}</div>
+                </div>
+                <div class="panel-body">
+                    <div class="uk-flex uk-flex-middle uk-flex-space-between">
+                        <div></div>
+                        <div class="image background-image">
+                            <img src="{{ asset('frontend/resources/img/project/tennis-player-N79XUC8.png') }}" alt="image">
+                        </div>
+                        @if(isset($feedback->posts) && count($feedback->posts))
+                        <div class="feedback-container">
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                @foreach($feedback->posts as $post)
+                                @php
+                                    $name = $post->languages[0]->name;
+                                    $description = $post->languages[0]->description;
+                                    $content = $post->languages[0]->content;
+                                    $image = $post->image;
+                                @endphp
+                                    <div class="swiper-slide">
+                                        <div class="feedback-item">
+                                            <div class="uk-flex uk-flex-column uk-flex-space-between uk-height-1-1">
+                                                <div class="description">{!! $content !!}</div>
+                                                <div class="content">
+                                                    <div class="uk-flex uk-flex-middle">
+                                                        <span class="image avatar"><img src="{{ $image }}" alt="{{ $name }}"></span>
+                                                    <div>
+                                                        <div class="fullname">{{ $name }}</div>
+                                                        <div class="position">{!! $description !!}</div>
+                                                    </div>
+                                                    </div>
                                                 </div>
-                                            </div>
 
+                                            </div>
                                         </div>
                                     </div>
+                                    @endforeach
                                 </div>
-                                @endforeach
                             </div>
                         </div>
+                        @endif
                     </div>
-                    @endif
                 </div>
             </div>
         </div>
-    </div>
     @endforeach
     @endif
     <div class="panel-video" style="background: url({{$system['homepage_video_background']}});background-position:top center;background-size:cover;background-repeat:no-repeat;background-attachment:fixed">
@@ -157,6 +154,7 @@
             </div>     
         </div>
     </div>
+
     @include('frontend.component.price')
 
     @if(isset($widgets['news']) && !is_null($widgets['news']))
@@ -168,30 +166,33 @@
         <div class="panel-news">
             <div class="uk-container uk-container-center">
                 <div class="panel-head uk-flex uk-flex-middle uk-flex-space-between">
-                    <h2 class="heading-1 style-2"><span>{{ $catName }}</span></h2>
+                    <h2 class="heading-1 style-2 wow fadeInLeft" data-wow-delay="0.4s"><span>{{ $catName }}</span></h2>
                     <x-button title="Xem tất cả tin tức" canonical="{{ $catCanonical }}" />
                 </div>
                 <div class="panel-body">
                     @if(isset($val->posts) && count($val->posts))
-                    <div class="uk-grid uk-grid-medium">
-                        @foreach($val->posts as $keyPost => $post)
-                        @if ($keyPost > 3) @break @endif
                         @php
-                            $name = $post->languages[0]->name;
-                            $canonical = write_url($post->languages[0]->canonical);
-                            $image = $post->image;
+                            $time = 0.2;
                         @endphp
-                        <div class="uk-width-small-1-1 uk-width-medium-1-2">
-                            <div class="news-item">
-                                <a href="{{ $canonical }}" class="image img-cover"><img src="{{ $image }}" alt="{{ $name }}"></a>
-                                <div class="info">
-                                    <div class="category-name">{{ $catName }}</div>
-                                    <h3 class="title"><a href="{{ $canonical }}" title="{{ $name }}">{{ $name }} </a></h3>
+                        <div class="uk-grid uk-grid-medium">
+                            @foreach($val->posts as $keyPost => $post)
+                                @if ($keyPost > 3) @break @endif
+                                @php
+                                    $name = $post->languages[0]->name;
+                                    $canonical = write_url($post->languages[0]->canonical);
+                                    $image = $post->image;
+                                @endphp
+                                <div class="uk-width-small-1-1 uk-width-medium-1-2">
+                                    <div class="news-item wow fadeInDown" data-wow-delay="{{ $time * ($keyPost + 1) }}s">
+                                        <a href="{{ $canonical }}" class="image img-cover"><img src="{{ $image }}" alt="{{ $name }}"></a>
+                                        <div class="info">
+                                            <div class="category-name">{{ $catName }}</div>
+                                            <h3 class="title"><a href="{{ $canonical }}" title="{{ $name }}">{{ $name }} </a></h3>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                            @endforeach
                         </div>
-                        @endforeach
-                    </div>
                     @endif
                 </div>
             </div>
@@ -200,45 +201,47 @@
     @endif
 
     @if(isset($widgets['question']->object))
-    @foreach($widgets['question']->object as $key => $val)
-    @php
-        $catName = $val->languages->name;
-        $image = $val->image;
-    @endphp
-    <div class="panel-question">
-        <div class="uk-container uk-container-center">
-            <div class="uk-grid uk-grid-large">
-                <div class="uk-width-medium-1-2">
-                    <div class="image">
-                        <img src="{{ $image }}" alt="{{ $catName }}">
-                    </div>
-                </div>
-                <div class="uk-width-medium-1-2">
-                    @if(isset($val->posts) && count($val->posts))
-                    <div class="question-container">
-                        <h2 class="heading-1"><span>{{ $catName }}</span></h2>
-                        <div class="panel-body">
-                            <div class="uk-accordion" data-uk-accordion>
-                                @foreach($val->posts as $question)
-                                @php
-                                    $name = $question->languages[0]->name;
-                                    $description = $question->languages[0]->description;
-                                @endphp
-                                <div class="question-item">
-                                    <h3 class="uk-accordion-title">{{ $name }}</h3>
-                                    <div class="uk-accordion-content">{!! $description !!}</div>
-                                </div>
-                                @endforeach
-
+        @foreach($widgets['question']->object as $key => $val)
+            @php
+                $catName = $val->languages->name;
+                $image = $val->image;
+            @endphp
+            <div class="panel-question">
+                <div class="uk-container uk-container-center">
+                    <div class="uk-grid uk-grid-large">
+                        <div class="uk-width-medium-1-2">
+                            <div class="image wow fadeInLeft" data-wow-delay="0.4s">
+                                <img src="{{ $image }}" alt="{{ $catName }}">
                             </div>
                         </div>
+                        <div class="uk-width-medium-1-2">
+                            @if(isset($val->posts) && count($val->posts))
+                                <div class="question-container">
+                                    <h2 class="heading-1"><span>{{ $catName }}</span></h2>
+                                    <div class="panel-body">
+                                        <div class="uk-accordion" data-uk-accordion>
+                                            @php
+                                                $time = 0.2;
+                                            @endphp
+                                            @foreach($val->posts as $k => $question)
+                                                @php
+                                                    $name = $question->languages[0]->name;
+                                                    $description = $question->languages[0]->description;
+                                                @endphp
+                                                <div class="question-item wow fadeInDown" data-wow-delay="{{ $time * ($k + 1) }}s">
+                                                    <h3 class="uk-accordion-title">{{ $name }}</h3>
+                                                    <div class="uk-accordion-content">{!! $description !!}</div>
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                </div>
+                            @endif
+                        </div>
                     </div>
-                    @endif
                 </div>
             </div>
-        </div>
-    </div>
-    @endforeach
+        @endforeach
     @endif
     
 

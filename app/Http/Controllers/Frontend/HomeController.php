@@ -12,7 +12,6 @@ use App\Enums\SlideEnum;
 use Illuminate\Http\Request;
 use App\Services\Interfaces\PostServiceInterface as PostService;
 use App\Models\Post;
-use App\Models\Lecturer;
 
 class HomeController extends FrontendController
 {
@@ -54,14 +53,11 @@ class HomeController extends FrontendController
             ['keyword' => 'products', 'object' => true],
             ['keyword' => 'intro', 'children' => true, 'object' => true],
             ['keyword' => 'intro-children', 'children' => true, 'object' => true],
-            // ['keyword' => 'new-course-launch', 'object' => true, 'promotion' => true],
             ['keyword' => 'program', 'object' => true],
             ['keyword' => 'feedback', 'object' => true],
             ['keyword' => 'news', 'object' => true],
             ['keyword' => 'question', 'object' => true],
         ], $this->language);
-
-        // dd($widgets);
 
         $slides = $this->slideService->getSlide(
             [SlideEnum::MAIN, SlideEnum::TECHSTAFF, SlideEnum::PARTNER],

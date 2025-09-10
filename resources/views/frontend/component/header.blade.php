@@ -5,7 +5,7 @@
                 <img src="{{ $system['homepage_logo'] }}" alt="logo">
             </a>
             @include('frontend.component.navigation')
-            <div class="register-now">
+            <div class="register-now wow fadeInDown" data-wow-delay="0.4S">
                 <a href="" class="register-button uk-flex uk-flex-middle">
                     <span>Đăng ký ngay</span>
                     <span class="icon"><img src="{{ asset('frontend/resources/img/project/baseball.png') }}" alt="icon"></span>
