@@ -7,7 +7,7 @@
                     <div class="description wow fadeInDown" data-wow-delay="0.5s">
                         Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua utenim ad minim veniam.
                     </div>
-                    <x-button title="Tham gia chương trình của chúng tôi" canonical="" />
+                    <x-button title="Tham gia chương trình của chúng tôi" canonical="{{ write_url('lien-he') }}" />
                 </div>
             </div>
         </div>
