@@ -68,7 +68,7 @@
 
 .review-action .btn-review{
     background: #E0F656;
-    color:#fff;
+    color:#000;
     border:0;
     border-radius: 8px;
     padding:10px 25px;
@@ -636,7 +636,7 @@ label{
     background-color: #E0F656;
     font-size:14px;
     font-weight: 600;
-    color:#fff;
+    color:#000;
     text-transform: uppercase;
     transition: all 0.3s ease;
     cursor: pointer;

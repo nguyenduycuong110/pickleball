@@ -383,7 +383,7 @@ ul li,ol li{
 }
 
 @media (max-width: 768px){
-    .panel-intro .uk-grid .uk-width-medium-1-3:nth-child(2){
+    /* .panel-intro .uk-grid .uk-width-medium-1-3:nth-child(2){
         order:1;
     }
     .panel-intro .uk-grid .uk-width-medium-1-3:nth-child(1){
@@ -391,7 +391,7 @@ ul li,ol li{
     }
     .panel-intro .uk-grid .uk-width-medium-1-3:nth-child(3){
         order:3;
-    }
+    } */
     .rate-item{
         margin-bottom:10px !important;
     }
@@ -402,18 +402,11 @@ ul li,ol li{
     }
     .panel-intro .section-1 .title{
         font-size:35px;
-        line-height:35px;
+        line-height:1.3;
     }
 }
 
 @media (max-width: 500px){
-    .panel-intro .section-1, .panel-intro .section-3{
-        height:300px;
-    }
-    .panel-intro .section-1 .title{
-        font-size: 20px;
-        line-height: 20px;
-    }
     .section-1 .register-button >span:nth-child(1){
         display: none;
     }
@@ -1916,6 +1909,197 @@ button{
     .panel-news{
         margin: 0 10px;
         margin-bottom: 150px;
+    }
+    .contact-form {
+        width: 100%;
+    }
+    
+}
+@media(max-width:767px){
+    .heading-1 > *{
+        font-size: 44px;
+        line-height: 64px;
+    }
+    .panel-program{
+        margin-bottom: 30px;
+    }
+    .footer-middle .uk-width-large-1-3 {
+        width: 100%;
+    }
+    .footer-menu .uk-width-medium-1-2{
+        margin-bottom: 20px;
+    }
+    .panel-feedback .swiper-slide{
+        width: 100% !important;
+    }
+    .price-item .price span {
+        font-size: 14px;
+    }
+    .news-item .info .title > * {
+        font-size: 25px;
+        line-height: 35px;
+    }
+    .feedback-item .description {
+        font-size: 20px;
+        line-height: 32px;
+    }
+    .panel-aboutus .panel-head .description:after{
+        display: none;
+    }
+    .panel-feedback{
+        height: 850px;
+    }
+    .section-4 .panel-head{
+        margin-bottom: 20px;
+    }
+    .intro-description .description,
+    .intro-description .heading-1 {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .about-children-item.style-2{
+        margin-bottom: 20px;
+    }
+    .program-container .panel-head{
+        display: block;
+    }
+    .program-container .program-intro{
+        width: 100%;
+        height: auto !important;
+        min-height: unset;
+        margin-bottom: 15px;
+    }
+    .program-container .program-sidebar{
+        width: 100%;
+    }
+    .program-sidebar .uk-width-large-1-2{
+        margin-bottom: 15px;
+    }
+    .page-breadcrumb{
+        min-height: auto !important;
+    }
+    .product-catalogue-container{
+        margin-bottom: 50px;
+    }
+    .page-breadcrumb ul{
+        margin-bottom: 15px;
+    }
+    .page-breadcrumb  .heading-1 > * {
+        font-size: 22px;
+    }
+    .page-breadcrumb .description {
+        margin-top: 0;
+        line-height: 1.5;
+    }
+    .page-breadcrumb ul li a {
+        font-size: 14px;
+    }
+    .post-list {
+        margin-bottom: 50px;
+    }
+    .panel-head .page-heading{
+        margin-bottom: 20px;
+    }
+    .product-container .uk-width-large-1-10{
+        display: none;
+    }
+    .product-container .uk-width-large-1-10,
+    .product-container .uk-width-large-5-10{
+        max-width:100% !important;
+        width: 100% !important;
+    }
+    .product-button__group .uk-width-large-1-2{
+        margin-bottom: 15px;
+    }
+    .product-button__buynow{
+        margin-top: 0;
+    }
+    .progress-item .uk-flex{
+        justify-content: center;
+    }
+    .product-detail__hotline .uk-width-large-1-2{
+        margin-bottom: 30px;
+    }
+    .product-detail__hotline .uk-width-large-1-2:nth-child(2) {
+        margin-bottom: 40px !important;
+    }
+    .product-detail__hotline .uk-width-large-1-2:nth-child(3) {
+        margin-bottom: 40px !important;
+    }
+}
+@media(max-width:567px){
+    .heading-1 > * {
+        font-size: 36px;
+        line-height: 56px;
+    }
+    .panel-news .panel-head{
+        display: block;
+    }
+    .panel-news .panel-head h2.heading-1{
+        margin-bottom: 25px;
+    }
+    .footer-form .form-heading{
+        font-size: 16px;
+        text-align: center;
+    }
+    .section-3 .info .heading-1 > span{
+        font-size: 32px;
+    }
+    .coach-item .image{
+        height: auto !important;
+    }
+    .panel-program h2.heading-1 > *,
+    .program-intro h2.heading-1 > *{
+        font-size: 28px;
+        line-height: 42px;
+    }
+    .mb200 {
+        margin-bottom: 50px !important;
+    }
+    .program-item{
+        border-radius: 10px;
+    }
+    .program-item .image ,
+    .program-item .image img{
+        border-radius: 0;
+    }
+    .program-item .info {
+        position: relative;
+        width: 100%;
+        border: none;
+        max-width: 100%;
+        left: unset;
+        bottom: unset;
+    }
+}
+@media(max-width:467px){
+    .c-number{
+        font-size: 32px;
+    }
+    .feedback-item {
+        height: 100% !important;
+    }
+    .panel-product-grid .uk-width-medium-1-2{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .join-button .icon{
+        display: none !important;
+    }
+    .section-2-item .uk-width-medium-1-2{
+        width: 100%;
+    }
+    .about-children .uk-width-medium-1-2{
+        width: 100% !important;
+    }
+    .feedback-item .description{
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    .program-intro h2.heading-1 > * {
+        font-size: 20px;
+        line-height: 36px;
     }
     
 }
