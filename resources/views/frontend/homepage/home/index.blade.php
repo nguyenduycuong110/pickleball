@@ -78,7 +78,9 @@
             </div>
         </div>
     </div>
+
     @include('frontend.component.about-us')
+    
     @include('frontend.component.program')
 
     @if(!is_null($widgets['feedback']->object))
@@ -140,6 +142,7 @@
         </div>
     @endforeach
     @endif
+
     <div class="panel-video" style="background: url({{$system['homepage_video_background']}});background-position:top center;background-size:cover;background-repeat:no-repeat;background-attachment:fixed">
         <div class="video-container">
             <a href="#video-modal" class="preview-v" data-uk-modal>
