@@ -159,7 +159,7 @@
                 placeholder="Nhập mã nhúng iframe của video"
             >{{ old('iframe', ($product->iframe) ?? '') }}</textarea>
         </div>
-        {{-- <div class="form-row">
+        <div class="form-row">
             <label for="">Nội dung khóa học</label>
             <div class="text-danger" style="font-size:12px;font-style:italic">Mỗi nội dung thể hiện trên 1 dòng</div>
             <textarea 
@@ -168,7 +168,7 @@
                 class="form-control"
                 style="height:168px;"
             >{{ old('lession_content', ($product->lession_content) ?? '') }}</textarea>
-        </div> --}}
+        </div>
     </div>
 </div>
 
