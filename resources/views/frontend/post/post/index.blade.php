@@ -35,7 +35,7 @@
                 </div>
                 <div class="uk-width-large-1-4">
                     <div class="post-aside">
-                        <div class="aside-form panel-contact aside-panel">
+                        {{-- <div class="aside-form panel-contact aside-panel">
                             <div class="aside-heading">Đăng ký tư vấn</div>
                             <div class="aside-body">
                                 <form action="" method="POST" class="register-form">
@@ -65,25 +65,25 @@
                                     </button>
                                 </form>
                             </div>
-                        </div>
+                        </div> --}}
                         @if(count($widgets['product-catalogue']->object))
                         <div class="aside-product-category aside-panel">
                             <div class="aside-heading">Danh mục sản phẩm</div>
-                            <div class="aside-body">
-                                @foreach($widgets['product-catalogue']->object as $key => $val)
-                                @php
-                                    $image = $val->image;
-                                    $name = $val->languages->name;
-                                    $canonical = write_url($val->languages->canonical);
-                                    $description = $val->languages->description;
-                                @endphp
-                                <div class="category-item uk-flex uk-flex-middle">
-                                    <span class="icon"><img src="{{ $image }}" alt="{{ $name }}"></span>
-                                    <a href="{{ $canonical }}" title="{{ $name }}">{{ $name }}</a>
+                                <div class="aside-body">
+                                    @foreach($widgets['product-catalogue']->object as $key => $val)
+                                    @php
+                                        $image = $val->image;
+                                        $name = $val->languages->name;
+                                        $canonical = write_url($val->languages->canonical);
+                                        $description = $val->languages->description;
+                                    @endphp
+                                    <div class="category-item uk-flex uk-flex-middle">
+                                        <span class="icon"><img src="{{ $image }}" alt="{{ $name }}"></span>
+                                        <a href="{{ $canonical }}" title="{{ $name }}">{{ $name }}</a>
+                                    </div>
+                                    @endforeach
                                 </div>
-                                @endforeach
                             </div>
-                        </div>
                          @endif
                     </div>
                    

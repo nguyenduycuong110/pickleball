@@ -1,33 +1,28 @@
 @extends('frontend.homepage.layout')
 @section('content')
     <div class="contact-page">
-        <div class="uk-container uk-container-center">
-            <div class="mt40 mb40 banner">
-                <a href="" class="image img-cover">
-                    <img src="{{ $system['background_1'] }}" alt="">
-                </a>
-                <div class="text-overlay">
-                    <div class="page-breadcrumb">      
-                        <div class="uk-container uk-container-center">
-                            <ul class="uk-list uk-clearfix uk-flex uk-flex-middle">
-                                <li>
-                                    <a href="/">Trang chủ</a>
-                                </li>
-                                <li>
-                                    <span class="slash">/</span>
-                                </li>
-                                <li>
-                                    <a href="">Liên hệ</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <h2 class="heading-1"><span>Liên hệ với chúng tôi</span></h2>
+        <div class="page-breadcrumb bg-black">      
+            <div class="uk-container uk-container-center">
+                <div class="page-breadcrumb-content">
+                    <ul class="uk-list uk-clearfix uk-flex uk-flex-middle">
+                        <li>
+                            <a href="/">Trang chủ</a>
+                        </li>
+                        <li>
+                            <span class="slash">/</span>
+                        </li>
+                        <li>
+                            <a href="">Liên hệ</a>
+                        </li>
+                    </ul>
+                    <h1 class="heading-1 style-2"><span>Liên hệ với chúng tôi</span></h1>
                     <div class="description">
                         <p>Bạn đang có những thắc mắc, nan giải về khóa học hãy chia sẻ vấn đề với chúng tôi</p>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="uk-container uk-container-center">
             <div class="contact-form">
                 <div class="wrapper">
                     <div class="frm-ct">

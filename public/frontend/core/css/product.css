@@ -43,7 +43,7 @@
     color:#939ca3
 }
 .review-container .uk-progress{
-    width:355px;
+    width:280px;
     height:8px;
     margin:0;
 }
@@ -67,13 +67,13 @@
 }
 
 .review-action .btn-review{
-    background: #cb1c22;
+    background: #E0F656;
     color:#fff;
     border:0;
     border-radius: 8px;
     padding:10px 25px;
     font-size:16px;
-    /* text-transform: uppercase; */
+    text-transform: uppercase;
     font-weight: 500;
     cursor: pointer;
 }
@@ -98,7 +98,7 @@
     cursor: pointer;
 }
 .review-wrapper{
-    padding:0;
+    padding:20px;
 }
 .review-avatar{
     width:48px;
@@ -273,7 +273,7 @@
 }
 .review-form .form-row textarea{
     height:72px;
-    padding:8px;
+    padding:5px;
 }
 .review-form .form-row .review-text{
     height:40px;
@@ -308,7 +308,7 @@ label{
     margin-right:3px;
 }
 .star-rating {
-    font-size: 18px;
+    font-size: 25px;
     display: inline-block;
     position: relative;
 }
@@ -356,12 +356,12 @@ label{
 
 .swiper-container-thumbs .image{
     border: 1px solid #DDE4F0;
-    border-radius: 4px;
-    margin-bottom: 16px;
+    /* border-radius: 4px; */
+    margin-bottom: 10px;
     text-align: center;
     line-height: 108px;
     cursor: pointer;
-    height: 68px;
+    /* height: 68px; */
 }
 
 .product-container .product-gallery .swiper-pagination{
@@ -372,6 +372,7 @@ label{
    
 }
 .big-pic .image{
+    padding: 1px;
     border:1px solid #e2e4e8;
     border-right:0;
 }
@@ -385,9 +386,9 @@ label{
 }
 
 .product-info .product-main-title{
-    color: #005599;
-    font-size: 16px;
-    line-height:19px;
+    color: #000;
+    font-size: 20px;
+    line-height: 1.3;
     margin-bottom:10px;
 }
 
@@ -406,6 +407,7 @@ label{
 .product-info .spec-row{
     color: #c10011;
     font-weight: 600;
+    font-size: 15px;
 }
 
 .product-info__price .price{
@@ -436,6 +438,7 @@ label{
 .product-info__price .price .price-sale {
     font-size: 25px;
     font-weight: 900;
+    position: relative;
 }
 .product-info__price .price .price-old .percent{
     margin-left:15px;
@@ -496,7 +499,7 @@ label{
 .product-detail__description ul{
     padding-left:0;
 }
-.product-detail__description ul li{
+.product-detail__description ul li:not(:last-child){
     margin-bottom:8px;
 }
 .product-detail__description ul li strong{
@@ -537,27 +540,15 @@ label{
     font-weight: 600;
     margin-bottom:5px;
     color:#383e47;
+    font-size: 15px;
 }
 
 .product-container .uk-width-large-1-10{
-    width: 5%;
+    max-width: 5%;
 }
 .product-container .uk-width-large-5-10{
-    width: 55%;
+    width:55%;
 }
-
-@media (max-width: 600px){
-    .product-container .uk-width-large-1-10{
-        width: 15%;
-    }
-    .product-container .uk-width-large-5-10{
-        width: calc(100% - 15%);
-    }
-    .swiper-container-thumbs .image{
-        height: 35px;
-    }
-}
-
 
 
 @media (min-width: 1220px){
@@ -591,8 +582,14 @@ label{
 }
 
 .product-detail__description{
-    overflow-y: scroll;
-    scrollbar-width: thin;
+    /* height:124px;
+    overflow-y: scroll; */
+    /* scrollbar-width: thin; */
+    text-align: justify;
+    margin-bottom: 10px;
+    padding: 2px 0;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 .dialog-description{
@@ -606,8 +603,9 @@ label{
 
 .productContent{
     font-size:16px;
-    line-height:25px;
+    line-height:24px;
     text-align: justify;
+    line-height: 1.5;
 }
 .productContent img{
     margin:20px 0;
@@ -621,4 +619,43 @@ label{
     .productContent img{
         width:100%;
     }
+}
+.attribute-value img{
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+.product-detail__buyed{
+    font-size: 16px;
+}
+
+.btn-product-button{
+    padding: 15px 35px 13px 35px;
+    width:100%;
+    border: 1px solid #E0F656;
+    background-color: #E0F656;
+    font-size:14px;
+    font-weight: 600;
+    color:#fff;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.panel-foot .buy-more .btn-buymore:hover,
+.buy-more:hover,
+.btn-product-button:hover{
+    background: transparent !important;
+    color:#E0F656 !important;
+}
+
+.addToWishlist{
+    background: transparent;
+    border: 1px solid #000;
+    color:var(--text-color);
+}
+.addToWishlist:hover{
+    color:#fff;
+    border: 1px solid #000 !important;
+    background-color: #000 !important;
 }

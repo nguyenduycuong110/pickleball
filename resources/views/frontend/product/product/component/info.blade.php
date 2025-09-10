@@ -27,12 +27,34 @@
         @include('frontend.product.product.component.gift')
         @include('frontend.product.product.component.voucher')
         @include('frontend.product.product.component.variant')
-        
+        <div class="quantity">
+            <div class="mb10">Số lượng:</div>
+            <div class="uk-flex uk-flex-middle">
+                <div class="quantitybox uk-flex uk-flex-middle">
+                    <div class="minus quantity-button">-</div>
+                    <input type="text" name="" value="1" class="quantity-text">
+                    <div class="plus quantity-button">+</div>
+                </div>
+            </div>
+        </div>
+        <div class="product-button__group">
+            <div class="uk-grid uk-grid-small">
+                <div class="uk-width-large-1-2">
+                    <button class="btn-product-button addToCart" data-id="{{ $product->id }}">Thêm vào giỏ hàng</button>
+                </div>
+                <div class="uk-width-large-1-2">
+                    <button class="btn-product-button addToWishlist" data-id="{{ $product->id }}">Thêm vào yêu thích</button>
+                </div>
+            </div>
+            <div class="product-button__buynow mt10">
+                <button class="btn-product-button addToCart" data-redirect="redirect" data-id="{{ $product->id }}">Mua ngay sản phẩm này</button>
+            </div>
+        </div>
     </div>
     <div class="product-detail__buyed">
        <div class="uk-flex uk-flex-middle">
             <i class="fi-rs-eye"></i> 
-            <span class="ml10"> {{ rand(1,100) }} đã xem sản phẩm</span>
+            <span class="ml10"> {{ rand(1,100) }} customers are viewing this product</span>
        </div>
     </div>
     <div class="product-detail__hotline">

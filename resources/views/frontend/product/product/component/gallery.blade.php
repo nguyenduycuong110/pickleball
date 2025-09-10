@@ -1,8 +1,8 @@
 
 @if(isset($gallery) && !empty($gallery) && !is_null($gallery))
     <div class="product-gallery">
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        {{-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> --}}
         <div class="swiper-container">
             <div class="swiper-wrapper big-pic">
                 <?php foreach($gallery as $key => $val){  ?>

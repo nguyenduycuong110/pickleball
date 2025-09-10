@@ -82,8 +82,9 @@ class ProductController extends FrontendController
         if (!is_null($product->seller_id)) {
             $seller = $this->customerRepository->findById($product->seller_id);
         }
-        $promotionLeft = $this->promotionLeft($product);
 
+        
+        $promotionLeft = !empty($product->promotions) ?  $this->promotionLeft($product) : null;
 
         $productCatalogue = $this->productCatalogueRepository->getProductCatalogueById($product->product_catalogue_id, $this->language);
 
