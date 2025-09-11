@@ -1848,10 +1848,10 @@ button{
     }
     .panel-feedback {
         margin-bottom: 0;
-        height: 700px;
+        height: 100% !important;
     }
     .panel-feedback .panel-head {
-        margin-bottom: 0;
+        margin-bottom: 20px;
     }
     .panel-video{
         margin-left: 10px;
@@ -1925,6 +1925,9 @@ button{
     }
     .feedback-container {
         width: 100% !important;
+        position: relative !important;
+        top: unset;
+        right: unset;
     }
 }
 @media(max-width:767px){
@@ -1959,7 +1962,8 @@ button{
         display: none;
     }
     .panel-feedback{
-        height: 850px;
+        height: 100% !important;
+        margin-bottom: 40px;
     }
     .section-4 .panel-head{
         margin-bottom: 20px;
