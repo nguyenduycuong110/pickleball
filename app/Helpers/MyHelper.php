@@ -693,7 +693,9 @@ if(!function_exists('thumb')){
             $params['h'] = $height;
         }
         
-        return route('thumb', $params);
+        // return route('thumb', $params);
+
+        return $path;
     }
 }
 

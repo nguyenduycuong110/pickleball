@@ -102,39 +102,39 @@
                             <img src="{{ asset('frontend/resources/img/project/tennis-player-N79XUC8.png') }}" alt="image">
                         </div>
                         @if(isset($feedback->posts) && count($feedback->posts))
-                        <div class="feedback-container">
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-container">
-                                <div class="swiper-wrapper">
-                                @foreach($feedback->posts as $post)
-                                @php
-                                    $name = $post->languages[0]->name;
-                                    $description = $post->languages[0]->description;
-                                    $content = $post->languages[0]->content;
-                                    $image = $post->image;
-                                @endphp
-                                    <div class="swiper-slide">
-                                        <div class="feedback-item">
-                                            <div class="uk-flex uk-flex-column uk-flex-space-between uk-height-1-1">
-                                                <div class="description">{!! $content !!}</div>
-                                                <div class="content">
-                                                    <div class="uk-flex uk-flex-middle">
-                                                        <span class="image avatar"><img src="{{ $image }}" alt="{{ $name }}"></span>
-                                                    <div>
-                                                        <div class="fullname">{{ $name }}</div>
-                                                        <div class="position">{!! $description !!}</div>
+                            <div class="feedback-container">
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                    @foreach($feedback->posts as $post)
+                                    @php
+                                        $name = $post->languages[0]->name;
+                                        $description = $post->languages[0]->description;
+                                        $content = $post->languages[0]->content;
+                                        $image = $post->image;
+                                    @endphp
+                                        <div class="swiper-slide">
+                                            <div class="feedback-item">
+                                                <div class="uk-flex uk-flex-column uk-flex-space-between uk-height-1-1">
+                                                    <div class="description">{!! $content !!}</div>
+                                                    <div class="content">
+                                                        <div class="uk-flex uk-flex-middle">
+                                                            <span class="image avatar"><img src="{{ $image }}" alt="{{ $name }}"></span>
+                                                        <div>
+                                                            <div class="fullname">{{ $name }}</div>
+                                                            <div class="position">{!! $description !!}</div>
+                                                        </div>
+                                                        </div>
                                                     </div>
-                                                    </div>
-                                                </div>
 
+                                                </div>
                                             </div>
                                         </div>
+                                        @endforeach
                                     </div>
-                                    @endforeach
                                 </div>
                             </div>
-                        </div>
                         @endif
                     </div>
                 </div>
@@ -246,6 +246,5 @@
             </div>
         @endforeach
     @endif
-    
 
 @endsection
