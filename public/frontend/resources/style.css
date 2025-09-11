@@ -639,6 +639,7 @@ ul li,ol li{
     position: absolute;
     right:0;
     top:90px;
+    width: 834px;
 }
 .panel-feedback .panel-head{
     margin-bottom:200px;
@@ -1922,7 +1923,9 @@ button{
     .contact-form {
         width: 100%;
     }
-    
+    .feedback-container {
+        width: 100% !important;
+    }
 }
 @media(max-width:767px){
     .heading-1 > *{
