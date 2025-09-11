@@ -4,7 +4,7 @@
             $descriptionC = strip_tags($val->languages->description);
             $contentC = strip_tags($val->languages->content);
         @endphp
-        <div class="panel-product">
+        <div class="panel-product" id="panel-product">
             <div class="uk-container uk-container-center">
                 <div class="panel-product-grid">
                     <div class="panel-head">

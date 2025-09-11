@@ -131,7 +131,7 @@ ul li,ol li{
     padding: 25px 25px;
 }
 .header-upper .logo{
-    max-width: 120px;
+    max-width: 130px;
 }
 
 .navigation li.children > a::before{
@@ -1007,7 +1007,10 @@ ul li,ol li{
 }
 .footer-middle .footer-logo{
     max-width: 150px;
-    margin-bottom:50px;
+    margin-bottom: 20px;
+}
+.footer-middle .footer-logo > *{
+    font-weight: 600;
 }
 /* .footer-middle .footer-logo img{
     width:100%;
@@ -1031,7 +1034,6 @@ ul li,ol li{
 }
 .footer-form{
     background: #000000;
-    height:100%;
     border-radius: 20px;
     padding:20px;
 }

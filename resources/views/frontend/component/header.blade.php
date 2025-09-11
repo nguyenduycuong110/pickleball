@@ -11,11 +11,11 @@
                         <div class="uk-flex uk-flex-middle uk-flex-space-between">
                             <a href="{{ write_url('gio-hang') }}" title="" class="toolbox-item cart wow fadeInUp" data-wow-delay="0.35s">
                                 <img src="/frontend/resources/img/cart.svg" alt="">
-                                <span class="count">0</span>
+                                <span class="count">{{ $cartShare['cartTotalItems'] }}</span>
                             </a>
                         </div>
                     </div>
-                    <a href="{{ write_url('lien-he') }}" class="register-button uk-flex uk-flex-middle">
+                    <a href="#panel-product" class="register-button uk-flex uk-flex-middle">
                         <span>Đăng ký ngay</span>
                         <span class="icon"><img src="{{ asset('frontend/resources/img/project/baseball.png') }}" alt="icon"></span>
                     </a>

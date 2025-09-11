@@ -17,7 +17,7 @@
             <div class="uk-grid uk-grid-large">
                 <div class="uk-width-large-1-3">
                     <div class="footer-logo">
-                        <img src="{{ $system['homepage_logo'] }}" alt="logo">
+                        <span>{{ $system['homepage_company'] }}</span>
                     </div>
                     <div class="location-container">
                         <div class="address-item">- Địa chỉ: {{ $system['contact_office'] }}</div>

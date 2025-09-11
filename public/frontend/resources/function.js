@@ -424,10 +424,10 @@
 
     HT.scroll = () => {
         $(document).ready(function() {
-            $('a[href="#system"]').on('click', function(event) {
+            $('a[href="#panel-product"]').on('click', function(event) {
                 event.preventDefault();
                 $('html, body').animate({
-                    scrollTop: $('#system').offset().top - 50
+                    scrollTop: $('#panel-product').offset().top - 50
                 }, 800); 
             });
         });
